@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <h1>Hello World</h1>
-    <p>This is a sample HTML document</p>
-</body>
+  <div class="todo-container">
+    <h1>Todo List</h1>
+    
+    <!-- Input Form -->
+    <div class="form">
+      <input type="text" id="taskInput" placeholder="Add a todo...">
+      <input type="date" id="dueDateInput">
+      <button id="addBtn">+</button>
+    </div>
 
+    <!-- Action Buttons -->
+    <div class="actions">
+      <button id="filterBtn">FILTER</button>
+      <button id="deleteAllBtn">DELETE ALL</button>
+    </div>
+
+    <!-- Task Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>TASK</th>
+          <th>DUE DATE</th>
+          <th>STATUS</th>
+          <th>ACTIONS</th>
+        </tr>
+      </thead>
+      <tbody id="taskList">
+        <tr><td colspan="4">No task found</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
 </html>
